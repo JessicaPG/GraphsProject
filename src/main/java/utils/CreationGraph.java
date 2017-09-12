@@ -33,8 +33,8 @@ public abstract class CreationGraph {
 
          try {
              buffer = new BufferedReader(new InputStreamReader(System.in));
-
-             System.out.println("Is a directional graph?");
+             System.out.println("");
+             System.out.println("Is a directional graph? (true or false)");
              Scanner scanner = new Scanner(System.in);
 
              boolean isBidirectional = scanner.nextBoolean();
@@ -71,13 +71,17 @@ public abstract class CreationGraph {
 
          try {
              //Read vertex
+             System.out.println("");
              System.out.println("How many vertex have your graph?");
              int input = Integer.parseInt(buffer.readLine());
 
              //Read vertex's Id
-             System.out.println("Please, introduce each vertex's id" +
-                     "example: A (Pulse enter key)" +
-                     "         B (Pulse enter key)");
+             System.out.println("");
+             System.out.println("Please, introduce each vertex's id as the example");
+             System.out.println("A");
+             System.out.println("B");
+             System.out.println("C");
+             System.out.println("----------");
 
              String nodeId;
              arrayId = new ArrayList<String>();
@@ -109,8 +113,9 @@ public abstract class CreationGraph {
      protected static void readNode(ArrayList arrayId, Graph graph, boolean isBd){
              try {
                  //read node e1 -> node2 and weight of the edge
-                 System.out.println("Format for introducing the weight of the edge is: node1 node2 weight " +
-                         "Please press q to exit");
+                 System.out.println("");
+                 System.out.println("Introduce the weight of the edges as the example and press q to exit");
+                 System.out.println ("");
                  HashMap<String,Integer>  edgesWeight = new HashMap<String, Integer>();
                  String edgeInfo;
                  String[] arrayEdges;
@@ -159,11 +164,11 @@ public abstract class CreationGraph {
 
          try {
              scanner.nextLine();
-             System.out.println("Which node is the source - origin one for the " +
-                     "compute of the shortest paht?");
+             System.out.println("Which is the source node (origin)?");
              String source = scanner.nextLine();
-             System.out.println("Which is the destination node for the compute of the " +
-                     "shortest path?/n");
+             System.out.println("");
+             System.out.println("Which is the destination node for computing the " +
+                     "shortest path?");
              String destination = scanner.nextLine();
 
              nodesArray[0] = source;
